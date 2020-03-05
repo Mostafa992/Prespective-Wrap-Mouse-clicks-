@@ -38,6 +38,7 @@ while True:
     #showing the image with clicks
     cv2.imshow("books",img)
     cv2.setMouseCallback("cards",mousepoints)#this function takes two params, the first one is the image the 2nd is the mousepoint function
-    cv2.waitKey(1)
+    if cv2.waitKey(1)&0xFF== ord ("q"):
+        break
 
 

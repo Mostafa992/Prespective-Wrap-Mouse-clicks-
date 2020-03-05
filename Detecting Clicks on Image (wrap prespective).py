@@ -4,7 +4,6 @@ import cv2
 #read in the image
 path="Resources/book.jpg"
 img=cv2.imread(path)
-print(img.shape)
 #declare the variables of circles and counter
 circles=np.zeros((4,2),np.int)
 counter=0
@@ -37,7 +36,7 @@ while True:
         cv2.circle(img,(circles[x][0],circles[x][1]),2,(0,0,255),8,cv2.FILLED)
 
     #showing the image with clicks
-    cv2.imshow("cards",img)
+    cv2.imshow("books",img)
     cv2.setMouseCallback("cards",mousepoints)#this function takes two params, the first one is the image the 2nd is the mousepoint function
     cv2.waitKey(1)
 
